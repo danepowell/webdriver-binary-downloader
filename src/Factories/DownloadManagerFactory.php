@@ -45,11 +45,9 @@ class DownloadManagerFactory
     {
         $composer = $this->composerContext->getLocalComposer();
         $packages = $this->composerContext->getActivePackages();
-
         $packageResolver = new \Lanfest\WebDriverBinaryDownloader\Resolvers\PackageResolver(
             array($composer->getPackage())
         );
-
         $pluginPackage = $packageResolver->resolveForNamespace(
             $packages,
             get_class($pluginConfig)

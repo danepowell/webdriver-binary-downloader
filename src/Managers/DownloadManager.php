@@ -2,7 +2,6 @@
 
 namespace Lanfest\WebDriverBinaryDownloader\Managers;
 
-use Composer\Package\PackageInterface;
 use Lanfest\WebDriverBinaryDownloader\Interfaces\ConfigInterface;
 use Composer\Util\HttpDownloader;
 use Composer\Util\SyncHelper;
@@ -78,7 +77,7 @@ class DownloadManager
         \Composer\Installer\InstallationManager $installationManager,
         \Composer\Cache $cacheManager,
         \Lanfest\WebDriverBinaryDownloader\Factories\DriverPackageFactory $driverPkgFactory,
-        \Lanfest\WebDriverBinaryDownloader\Interfaces\ConfigInterface $pluginConfig
+        \Lanfest\WebDriverBinaryDownloader\Interfaces\ConfigInterface $pluginConfig,
         \Composer\Composer $composer
     ) {
         $this->ownerPackage = $ownerPackage;
